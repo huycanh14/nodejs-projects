@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% var b = 29; %>
+    <h2>Biến b có giá trị là <%= b %></h2>
+    <%= b*2 %>
+
+    <!-- <%
+      for(var i = 1; i < 20; i++){
+    %>
+    <h3>Xin chào lần thứ <%= i %></h3>
+    <% 
+    }  
+    %> -->
+
+    <%
+      var mang = ["PHP", "Thiết kế website", "làm video quảng cáo"];
+      for (var i = 0; i < mang.length; i++){
+        %>
+        <li>
+          <%= mang[i]%>
+        </li>
+        <%
+      }
+
+      mang.forEach(function(khoahoc){
+        %>
+        <li>
+          <%= khoahoc%>
+        </li>
+        <%
+      })
+    %>
+  </body>
+</html>
